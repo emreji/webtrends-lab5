@@ -1,0 +1,15 @@
+<div *ngIf="guests">
+  <div *ngFor="let g of guests">
+    <ul>
+      <li>{{ g.firstName }}</li>
+      <li>{{ g.lastName }}</li>
+      <li>{{ g.age }}</li>
+    </ul>
+  </div>
+</div>
+
+<input [(ngModel)]="guestSearch.firstName">
+<button (click)="findPeople()">Search</button>
+<div>
+  {{ guestSearch.firstName }}
+</div>
